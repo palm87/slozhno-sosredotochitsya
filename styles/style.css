@@ -186,23 +186,10 @@
 }
 
 .content-section {
-  margin-block-end: var(--margin-between-sections, 50px);
-  padding: 0 var(--padding-page-global, 10px);
-}
-
-/* Секции с текстом */
-
-/* .content-section-why,
-.content-section-what,
-.content-section-advices {
-  display: grid;
-  gap: 20px;
-} */
-
-
-.content-section {
   display: grid;
   gap: var(--gap-global, 20px);
+  margin-block-end: var(--margin-between-sections, 50px);
+  padding: 0 var(--padding-page-global, 10px);
 }
 
 /* Заголовки с подложкой, с шрифтом без болда */
