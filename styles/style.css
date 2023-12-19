@@ -245,7 +245,7 @@
   justify-content: center;
   align-items: center;
   block-size: 100vh;
-  max-inline-size: 100%;
+  /* max-inline-size: 100%; */
 }
 
 /* Текст в подвале */
@@ -269,11 +269,11 @@
   .header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr min-content 1fr;
-    margin-block-end: calc(
+    /* margin-block-end: calc(
       var(--margin-between-sections) - var(--padding-page-global)
     );
     padding: var(--padding-page-global, 20px);
-    block-size: 100vh;
+    block-size: 100vh; */
   }
 
   .header__theme-menu {
@@ -316,7 +316,7 @@
 
   .content-section-advices {
     grid-template-columns: 1fr 2fr;
-    margin: 80px 0;
+    /* margin: 80px 0; */
   }
 
   .content-section-advices .title {
@@ -351,9 +351,9 @@
     grid-area: 4 / 2 / 4 / 4;
   }
 
-  .footer {
+  /* .footer {
     block-size: 100vh;
-  }
+  } */
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -368,10 +368,10 @@
 
   .header {
     grid-template-columns: repeat(2, 1fr);
-    margin-block-end: calc(
+    /* margin-block-end: calc(
       var(--margin-between-sections) - var(--padding-page-global)
     );
-    block-size: 100vh;
+    block-size: 100vh; */
   }
 
   /* Блок с переключением темы */
@@ -409,7 +409,7 @@
 
   .content-section-what {
     grid-template-columns: repeat(3, 1fr);
-    margin: 80px 0;
+    /* margin: 80px 0; */
   }
 
   .content-section-what .title {
@@ -427,7 +427,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap-global);
-    margin: calc(var(--margin-between-sections) - var(--padding-page-global)) 0;
+    /* margin: calc(var(--margin-between-sections) - var(--padding-page-global)) 0; */
   }
 
   .gallery .title {
@@ -453,7 +453,7 @@
 
   .content-section-advices {
     grid-template-columns: 1fr 2fr;
-    margin: 80px 0;
+    /* margin: 80px 0; */
   }
 
   .content-section-advices .title {
