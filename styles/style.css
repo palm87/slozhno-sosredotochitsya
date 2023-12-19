@@ -5,7 +5,7 @@
   color: var(--main-font-color, #f1b2ce);
   font-family: var(--main-font, "IBM Plex Mono", monospace);
   font-weight: 400;
-  font-size: var(---regular-font-size, 18px);
+  font-size: var(--regular-font-size, 18px);
   line-height: 130%;
   background-color: var(--background-color, #000028);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -17,8 +17,8 @@
 /* Первый экран страницы */
 .header {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  /* margin-block-end: 40px; */
+  grid-template-rows: 1fr min-content 1fr;
+  margin-block-end: 40px;
   padding: var(--padding-page-global, 10px);
   block-size: 100vh;
 }
@@ -29,7 +29,6 @@
   visibility: var(--rec-visibility, visible);
   display: flex;
   align-items: center;
-  /* justify-content: start; */
   gap: 10px;
   inset-inline-end: calc(var(--padding-page-global) + 10px);
   inset-block-start: var(--padding-page-global, 10px);
@@ -87,7 +86,6 @@
 .header__theme-menu {
   justify-self: end;
   align-self: center;
-  margin-block-start: 20px;
 }
 
 /* Список кнопок тем */
@@ -144,9 +142,9 @@
 .title {
   color: var(--content-title-color);
   font-weight: 700;
-  /* align-self: center; */
   font-size: 18px;
 }
+
 /* Заголовки с подложкой */
 .title-accent {
   color: var(--decor-font-color, #000028);
@@ -202,7 +200,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: var(--margin-between-sections, 50px) auto;
+  margin: calc(var(--margin-between-sections) - var(--padding-page-global)) auto;
 }
 
 /* Картинка в галерее */
@@ -220,7 +218,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block-start: var(--margin-between-sections, 50px);
   block-size: 100vh;
 }
 
