@@ -21,6 +21,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
     --cover: url(../images/cover-image-light.png);
     --background-color: #fff1f7;
@@ -33,17 +34,19 @@
     --decoration-color: #353430;
     --shadow-color: #ff8dcb;
   }
+
   .header__theme-menu-button:hover {
-    outline: 1px solid rgba(50, 49, 45, 0.4);
+    outline: 1px solid rgb(50 49 45 / 0.4);
   }
 }
 
 .theme_light .header__theme-menu-button:hover {
-  outline: 1px solid rgba(50, 49, 45, 0.4);
+  outline: 1px solid rgb(50 49 45 / 0.4);
 }
 
 @media (width >= 1024px) {
+
   :root {
-  --shadow-color: #ff0070;
+    --shadow-color: #ff0070;
   }
 }
