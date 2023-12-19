@@ -18,7 +18,7 @@
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin-block-end: 40px;
+  margin-block-end: calc(var(--margin-between-sections) - var(--padding-page-global));
   padding: var(--padding-page-global, 10px);
   block-size: 100vh;
 }
@@ -126,6 +126,7 @@
 /* Область с главным заголовком страницы  */
 .header__title {
   align-self: center;
+  justify-self: ;
   color: var(--header-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -200,7 +201,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: calc(var(--margin-between-sections) - var(--padding-page-global)) auto;
+  margin: calc(var(--margin-between-sections) - var(--padding-page-global)) 0;
 }
 
 /* Картинка в галерее */
@@ -219,6 +220,7 @@
   justify-content: center;
   align-items: center;
   block-size: 100vh;
+  max-inline-size: 100%;
 }
 
 /* Текст в подвале */
@@ -230,6 +232,7 @@
   text-shadow: 2px 2px 0px var(--shadow-color);
 }
 
+/* ПЛАНШЕТЫ */
 @media (width >= 768px) and (width < 1024px) {
   :root {
     --padding-page-global: 20px;
@@ -238,9 +241,10 @@
 
   .header {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr min-content 1fr;
     padding: var(--padding-page-global, 20px);
     block-size: 100vh;
+    margin-block-end: calc(var(--margin-between-sections) - var(--padding-page-global));
   }
   .header__theme-menu {
     grid-area: 1 / 2 / 1 / 3;
@@ -252,7 +256,7 @@
     grid-area: 2 / 1 / 3 / 3;
     justify-self: start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    inset-inline-start: -10px;
+    inset-inline-start: -20px;
   }
 
   /* Область с подзаголовком страницы */
@@ -262,12 +266,12 @@
 
   .content-section-why {
     grid-template-columns: 1fr 2fr;
-    margin: var(--margin-between-sections, 80px) 0;
+    /* margin: var(--margin-between-sections, 80px) 0; */
   }
 
   .content-section-what {
     grid-template-columns: repeat(3, 1fr);
-    margin: var(--margin-between-sections, 80px) 0;
+    /* margin: var(--margin-between-sections, 80px) 0; */
   }
 
   .content-section-what .title {
@@ -290,7 +294,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: var(--margin-between-sections, 80px) 0;
+    margin: calc(var(--margin-between-sections) - var(--padding-page-global)) 0;
   }
   .gallery .title {
     grid-column: 1 / 4;
@@ -321,11 +325,14 @@
 @media (width >= 1024px) {
   :root {
     --padding-page-global: 20px;
+    --margin-between-sections: 80px;
   }
 
   .header {
     grid-template-columns: repeat(2, 1fr);
     block-size: 100vh;
+    /* max-inline-size: 1440px; */
+    margin-block-end: calc(var(--margin-between-sections) - var(--padding-page-global));
   }
   /* Блок с переключением темы */
 
@@ -343,7 +350,7 @@
     position: relative;
     grid-area: 2 / 1 / 3 / 3;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    inset-inline-start: -10px;
+    inset-inline-start: -20px;
   }
 
   .header_subtitle {
@@ -353,7 +360,7 @@
   .content-section-why {
     /* grid-template-columns: 1fr 2fr; */
     grid-template-columns: repeat(3, 1fr);
-    margin: var(--margin-between-sections, 80px) 0;
+    /* margin: var(--margin-between-sections, 80px) 0; */
   }
 
   .content-section-why .article-list {
@@ -379,7 +386,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: 80px 0;
+    margin: calc(var(--margin-between-sections) - var(--padding-page-global)) 0;
   }
 
   .gallery .title {
@@ -404,8 +411,7 @@
   }
 
   .footer {
-    min-inline-size: calc(100vw - 20px * 2);
-    min-block-size: calc(100vh - 20px * 2);
+
   }
 
   .content-section-advices {
