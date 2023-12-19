@@ -1,6 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-
 .page {
   color: var(--main-font-color, #f1b2ce);
   font-family: var(--main-font, "IBM Plex Mono", monospace);
@@ -18,7 +17,9 @@
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin-block-end: calc(var(--margin-between-sections) - var(--padding-page-global));
+  margin-block-end: calc(
+    var(--margin-between-sections) - var(--padding-page-global)
+  );
   padding: var(--padding-page-global, 10px);
   block-size: 100vh;
 }
@@ -126,7 +127,6 @@
 /* Область с главным заголовком страницы  */
 .header__title {
   align-self: center;
-  justify-self: ;
   color: var(--header-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -242,9 +242,12 @@
   .header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr min-content 1fr;
+    margin-block-end: calc(
+      var(--margin-between-sections) - var(--padding-page-global)
+    );
     padding: var(--padding-page-global, 20px);
     block-size: 100vh;
-    margin-block-end: calc(var(--margin-between-sections) - var(--padding-page-global));
+
   }
   .header__theme-menu {
     grid-area: 1 / 2 / 1 / 3;
@@ -330,12 +333,13 @@
 
   .header {
     grid-template-columns: repeat(2, 1fr);
+    margin-block-end: calc(
+      var(--margin-between-sections) - var(--padding-page-global)
+    );
     block-size: 100vh;
-    /* max-inline-size: 1440px; */
-    margin-block-end: calc(var(--margin-between-sections) - var(--padding-page-global));
   }
-  /* Блок с переключением темы */
 
+  /* Блок с переключением темы */
   .header__theme-menu {
     grid-area: 1 / 1/ 2/ 3;
     justify-self: center;
@@ -382,6 +386,7 @@
     grid-area: 2 / 1 / 3 / 4;
     gap: 20px;
   }
+  
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -408,10 +413,6 @@
 
   .gallery-item:nth-child(6) {
     grid-area: 4 / 2 / 4 / 4;
-  }
-
-  .footer {
-
   }
 
   .content-section-advices {
