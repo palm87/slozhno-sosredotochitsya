@@ -18,10 +18,10 @@
   --rec-visibility: hidden;
   --decoration-color: #353430;
   --shadow-color: #ff8dcb;
+  --hover-button-color: rgb(50 49 45 / 0.4);
 }
 
 @media (prefers-color-scheme: light) {
-
   :root {
     --cover: url(../images/cover-image-light.png);
     --background-color: #fff1f7;
@@ -33,10 +33,7 @@
     --rec-visibility: hidden;
     --decoration-color: #353430;
     --shadow-color: #ff8dcb;
-  }
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid rgb(50 49 45 / 0.4);
+    --hover-button-color: rgb(50 49 45 / 0.4);
   }
 }
 
@@ -45,7 +42,6 @@
 }
 
 @media (width >= 1024px) {
-
   :root {
     --shadow-color: #ff0070;
   }

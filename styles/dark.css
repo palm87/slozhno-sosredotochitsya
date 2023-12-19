@@ -21,4 +21,5 @@
   --rec-visibility: visible;
   --decoration-color: #ff0070;
   --shadow-color: #ff0070;
+  --hover-button-color: rgb(255 0 112 / 0.4);
 }
